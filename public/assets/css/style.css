@@ -1,0 +1,197 @@
+/* Variáveis de cores e espaçamento */
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --danger: #ef4444;
+    --danger-hover: #dc2626;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-800: #1f2937;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Botão de adicionar usuário */
+a[href*="novo"] {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+a[href*="novo"]:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Estilização da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border: none;
+}
+
+th {
+    background-color: var(--gray-100);
+    font-weight: 600;
+    color: var(--gray-800);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+tr:hover td {
+    background-color: var(--gray-100);
+}
+
+/* Coluna de ações */
+td:last-child {
+    width: 100px;
+    text-align: center;
+}
+
+/* Ícones de ação */
+.fa-pen-to-square, 
+.fa-trash {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.fa-pen-to-square {
+    color: var(--primary);
+}
+
+.fa-pen-to-square:hover {
+    color: var(--primary-hover);
+}
+
+.fa-trash {
+    color: var(--danger);
+}
+
+.fa-trash:hover {
+    color: var(--danger-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th, td {
+        padding: 0.75rem;
+    }
+    
+    a[href*="novo"] {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+h2 {
+    color: var(--gray-800);
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Mensagens de erro (opcional) */
+.error {
+    color: var(--danger);
+    font-size: 0.875rem;
+    margin-top: 0.375rem;
+}
+
+/* Mensagens de sucesso (opcional) */
+.success {
+    color: #10b981;
+    font-size: 0.875rem;
+    margin-top: 0.375rem;
+}
